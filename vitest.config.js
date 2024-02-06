@@ -4,6 +4,8 @@ export default defineConfig({
   test: {
     coverage: {
       provider: "istanbul", // or 'v8'
+      reporter: ["html "],
+      reportsDirectory: "coverage",
     },
   },
 });
