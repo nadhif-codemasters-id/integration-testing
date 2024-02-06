@@ -1,0 +1,20 @@
+{
+  "name": "01-integration-testing",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "numbers.js",
+  "scripts": {
+    "test": "vitest --run --reporter verbose",
+    "coverage": "vitest --run --coverage --reporter=verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vitest": "^1.2.2"
+  },
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^1.2.2"
+  }
+}
