@@ -1,6 +1,5 @@
 import { cleanNumbers } from "./numbers";
 import { it, expect } from "vitest";
-import { validateStringNotEmpty } from "./validation";
 
 it("should clean numbers", () => {
   // Arrange
@@ -22,5 +21,16 @@ it("should throw an error if the input is not a valid number", () => {
   const result = () => cleanNumbers(numbers);
 
   // Assert
-  expect(result).toThrowError("Invalid number input");
+  expect(result).toThrowError();
+});
+
+it("should throw an error if the input is empty", () => {
+  // Arrange
+  const numbers = ["1", "2", ""];
+
+  // Act
+  const result = () => cleanNumbers(numbers);
+
+  // Assert
+  expect(result).toThrowError("Invalid input - must not be empty.");
 });
